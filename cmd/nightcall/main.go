@@ -1,23 +1,24 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
 
-	"github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v3"
 )
 
 func main() {
-	app := &cli.App{
+	cmd := &cli.Command{
 		Name: "nightcall",
-		Action: func(*cli.Context) error {
+		Action: func(ctx context.Context, command *cli.Command) error {
 			fmt.Println("test")
 			return nil
 		},
 	}
 
-	if err := app.Run(os.Args); err != nil {
+	if err := cmd.Run(context.Background(), os.Args); err != nil {
 		log.Fatal(err)
 	}
 }

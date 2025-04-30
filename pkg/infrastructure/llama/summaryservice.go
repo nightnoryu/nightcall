@@ -3,7 +3,7 @@ package llama
 import (
 	"strings"
 
-	"nightcall/pkg/nightcall/app"
+	"github.com/nightnoryu/nightcall/pkg/app"
 
 	"github.com/go-skynet/go-llama.cpp"
 )

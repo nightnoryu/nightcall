@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"nightcall/pkg/nightcall/app"
+	"github.com/nightnoryu/nightcall/pkg/app"
 
 	"github.com/ggerganov/whisper.cpp/bindings/go/pkg/whisper"
 	"github.com/go-audio/wav"
@@ -39,7 +39,7 @@ func (s *transcriberService) Transcribe(audioFilePath string) (string, error) {
 	}
 
 	context.ResetTimings()
-	err = context.Process(samples, nil, nil)
+	err = context.Process(samples, nil, nil, nil)
 	if err != nil {
 		return "", err
 	}

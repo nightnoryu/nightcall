@@ -1,0 +1,6 @@
+[submodule "go-llama.cpp"]
+	path = go-llama.cpp
+	url = https://github.com/go-skynet/go-llama.cpp
+[submodule "whisper.cpp"]
+	path = whisper.cpp
+	url = https://github.com/ggml-org/whisper.cpp
